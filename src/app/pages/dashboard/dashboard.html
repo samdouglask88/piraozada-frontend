@@ -1,0 +1,65 @@
+<div class="dashboard">
+
+  <aside class="sidebar">
+    <div class="logo">🍲 Pirãozada</div>
+    <div class="subtitulo">Painel de Controle</div>
+
+    <nav class="menu">
+      <button class="menu-item ativo">📊 Resumo</button>
+      <button class="menu-item">🛒 Pedidos</button>
+      <button class="menu-item">💸 Custos</button>
+      <button class="menu-item">🏦 Fechamento</button>
+      <button class="menu-item">📄 Relatório</button>
+    </nav>
+
+    <button class="btn-logout" (click)="logout()">🚪 Sair</button>
+  </aside>
+
+  <main class="conteudo-principal">
+
+    <div class="topo">
+      <h2>Resumo da Operação</h2>
+      <p>Visão geral do seu negócio</p>
+    </div>
+
+    <div class="cards" *ngIf="!carregando && resumo">
+
+      <div class="card">
+        <span class="label">💰 Faturamento</span>
+        <span class="valor">R$ {{ resumo.faturamento | number:'1.2-2' }}</span>
+      </div>
+
+      <div class="card">
+        <span class="label">📈 Lucro</span>
+        <span class="valor">R$ {{ resumo.lucro | number:'1.2-2' }}</span>
+      </div>
+
+      <div class="card">
+        <span class="label">🎫 Ticket Médio</span>
+        <span class="valor">R$ {{ resumo.ticketMedio | number:'1.2-2' }}</span>
+      </div>
+
+      <div class="card">
+        <span class="label">🍗 Sabor Mais Vendido</span>
+        <span class="valor">{{ resumo.saborMaisVendido }}</span>
+      </div>
+
+      <div class="card">
+        <span class="label">📦 Tamanho Mais Vendido</span>
+        <span class="valor">{{ resumo.tamanhoMaisVendido }}</span>
+      </div>
+
+      <div class="card">
+        <span class="label">📅 Dia Mais Vendido</span>
+        <span class="valor">{{ resumo.diaMaisVendido }}</span>
+      </div>
+
+    </div>
+
+    <div *ngIf="carregando">
+      <p style="color: #888;">Carregando...</p>
+    </div>
+
+  </main>
+
+</div>

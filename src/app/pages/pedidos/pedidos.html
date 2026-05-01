@@ -1,0 +1,69 @@
+<div class="dashboard">
+
+  <aside class="sidebar">
+    <div class="logo">🍲 Pirãozada</div>
+    <div class="subtitulo">Painel de Controle</div>
+
+    <nav class="menu">
+      <button class="menu-item" (click)="irPara('/dashboard')">📊 Resumo</button>
+      <button class="menu-item ativo">🛒 Pedidos</button>
+      <button class="menu-item" (click)="irPara('/custos')">💸 Custos</button>
+      <button class="menu-item" (click)="irPara('/fechamento')">🏦 Fechamento</button>
+      <button class="menu-item" (click)="irPara('/relatorio')">📄 Relatório</button>
+    </nav>
+
+    <button class="btn-logout" (click)="logout()">🚪 Sair</button>
+  </aside>
+
+  <main class="conteudo-principal">
+
+    <div class="topo">
+      <h2>🛒 Lançar Pedido</h2>
+      <p>Registre um novo pedido</p>
+    </div>
+
+    <div class="formulario">
+
+      <div class="campo">
+        <label>Cliente</label>
+        <input type="text" [(ngModel)]="pedido.cliente" placeholder="Nome do cliente" />
+      </div>
+
+      <div class="campo">
+        <label>Sabor</label>
+        <select [(ngModel)]="pedido.sabor">
+          <option value="">Selecione...</option>
+          <option value="CARNE">Carne</option>
+          <option value="CALABRESA">Calabresa</option>
+          <option value="FRANGO">Frango</option>
+          <option value="MISTO">Misto</option>
+        </select>
+      </div>
+
+      <div class="campo">
+        <label>Tamanho</label>
+        <select [(ngModel)]="pedido.tamanho">
+          <option value="">Selecione...</option>
+          <option value="P">P — R$ 10,00</option>
+          <option value="M">M — R$ 12,00</option>
+          <option value="G">G — R$ 15,00</option>
+        </select>
+      </div>
+
+      <div class="campo">
+        <label>Quantidade</label>
+        <input type="number" [(ngModel)]="pedido.quantidade" min="1" />
+      </div>
+
+      <div class="acoes">
+        <button class="btn-salvar" (click)="salvar()">✅ Salvar Pedido</button>
+      </div>
+
+      <p class="msg-sucesso" *ngIf="sucesso">Pedido salvo com sucesso!</p>
+      <p class="msg-erro" *ngIf="erro">{{ erro }}</p>
+
+    </div>
+
+  </main>
+
+</div>

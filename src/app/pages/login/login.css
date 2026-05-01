@@ -1,0 +1,122 @@
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #1a0a00, #2C1A0E, #1a0a00);
+}
+
+.login-box {
+  background-color: #3a2010;
+  padding: 48px 40px;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+  border: 1px solid #F5A62340;
+}
+
+.logo {
+  text-align: center;
+  margin-bottom: 36px;
+}
+
+.emoji {
+  font-size: 48px;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.logo h1 {
+  font-size: 36px;
+  color: #F5A623;
+  font-weight: 800;
+  letter-spacing: 1px;
+  margin-bottom: 4px;
+}
+
+.logo p {
+  font-size: 13px;
+  color: #ffffff60;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  background-color: #2C1A0E;
+  border: 1.5px solid #F5A62350;
+  border-radius: 10px;
+  margin-bottom: 16px;
+  transition: border 0.2s;
+}
+
+.input-group:focus-within {
+  border-color: #F5A623;
+}
+
+.icon {
+  padding: 0 12px;
+  font-size: 18px;
+}
+
+.input-group input {
+  flex: 1;
+  padding: 14px 12px 14px 0;
+  border: none;
+  background: transparent;
+  color: #fff;
+  font-size: 15px;
+  margin-bottom: 0;
+}
+
+.input-group input:focus {
+  outline: none;
+  border: none;
+}
+
+button {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(135deg, #F5A623, #e8941a);
+  color: #2C1A0E;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 800;
+  cursor: pointer;
+  margin-top: 8px;
+  letter-spacing: 1px;
+  transition: opacity 0.2s, transform 0.1s;
+}
+
+button:hover {
+  opacity: 0.92;
+  transform: translateY(-1px);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+.erro {
+  color: #ff6b6b;
+  text-align: center;
+  margin-top: 12px;
+  font-size: 14px;
+}
+
+.esqueci {
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+  color: #F5A62380;
+  font-size: 13px;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.esqueci:hover {
+  color: #F5A623;
+}

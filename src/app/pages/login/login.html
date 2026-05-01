@@ -1,0 +1,37 @@
+<div class="login-container">
+  <div class="login-box">
+
+    <div class="logo">
+      <span class="emoji">🍲</span>
+      <h1>Pirãozada</h1>
+      <p>Sistema de Gestão</p>
+    </div>
+
+    <div class="form">
+      <div class="input-group">
+        <span class="icon">👤</span>
+        <input
+          type="text"
+          placeholder="Usuário"
+          [(ngModel)]="username"
+        />
+      </div>
+
+      <div class="input-group">
+        <span class="icon">🔒</span>
+        <input
+          type="password"
+          placeholder="Senha"
+          [(ngModel)]="senha"
+        />
+      </div>
+
+      <button (click)="login()">Entrar</button>
+
+      <p class="erro" *ngIf="erro">⚠️ {{ erro }}</p>
+
+      <a class="esqueci" href="#">Esqueci minha senha</a>
+    </div>
+
+  </div>
+</div>

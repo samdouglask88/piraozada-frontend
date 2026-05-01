@@ -1,1 +1,52 @@
-/* You can add global styles to this file, and also import other style files */
+/* Cores do Pirãozada */
+:root {
+  --marrom: #2C1A0E;
+  --dourado: #F5A623;
+  --branco: #FFFFFF;
+  --marrom-claro: #4A2E1A;
+  --cinza: #f5f5f5;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background-color: var(--marrom);
+  color: var(--branco);
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid var(--dourado);
+  border-radius: 8px;
+  background-color: var(--marrom-claro);
+  color: var(--branco);
+  font-size: 16px;
+  margin-bottom: 16px;
+}
+
+input:focus {
+  outline: none;
+  border-color: var(--branco);
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: var(--dourado);
+  color: var(--marrom);
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.9;
+}
