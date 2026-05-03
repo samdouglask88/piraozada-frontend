@@ -6,10 +6,10 @@
 
     <nav class="menu">
       <button class="menu-item ativo">📊 Resumo</button>
-      <button class="menu-item">🛒 Pedidos</button>
-      <button class="menu-item">💸 Custos</button>
-      <button class="menu-item">🏦 Fechamento</button>
-      <button class="menu-item">📄 Relatório</button>
+      <button class="menu-item" (click)="irPara('/pedidos')">🛒 Pedidos</button>
+      <button class="menu-item" (click)="irPara('/custos')">💸 Custos</button>
+      <button class="menu-item" (click)="irPara('/fechamento')">🏦 Fechamento</button>
+      <button class="menu-item" (click)="irPara('/relatorio')">📄 Relatório</button>
     </nav>
 
     <button class="btn-logout" (click)="logout()">🚪 Sair</button>
