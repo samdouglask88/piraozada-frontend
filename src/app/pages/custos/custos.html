@@ -1,0 +1,63 @@
+<div class="dashboard">
+
+  <aside class="sidebar">
+    <div class="logo">🍲 Pirãozada</div>
+    <div class="subtitulo">Painel de Controle</div>
+
+    <nav class="menu">
+      <button class="menu-item" (click)="irPara('/dashboard')">📊 Resumo</button>
+      <button class="menu-item" (click)="irPara('/pedidos')">🛒 Pedidos</button>
+      <button class="menu-item ativo">💸 Custos</button>
+      <button class="menu-item" (click)="irPara('/fechamento')">🏦 Fechamento</button>
+      <button class="menu-item" (click)="irPara('/relatorio')">📄 Relatório</button>
+    </nav>
+
+    <button class="btn-logout" (click)="logout()">🚪 Sair</button>
+  </aside>
+
+  <main class="conteudo-principal">
+
+    <div class="topo">
+      <h2>💸 Lançar Custo</h2>
+      <p>Registre um novo custo da operação</p>
+    </div>
+
+    <div class="formulario">
+
+      <div class="campo">
+        <label>Data</label>
+        <input type="date" [(ngModel)]="custo.data" />
+      </div>
+
+      <div class="campo">
+        <label>Produto</label>
+        <input type="text" [(ngModel)]="custo.produto" placeholder="Ex: Aipim" />
+      </div>
+
+      <div class="campo">
+        <label>Fornecedor</label>
+        <input type="text" [(ngModel)]="custo.fornecedor" placeholder="Ex: Mercado do João" />
+      </div>
+
+      <div class="campo">
+        <label>Quantidade</label>
+        <input type="number" [(ngModel)]="custo.quantidade" min="1" />
+      </div>
+
+      <div class="campo">
+        <label>Valor Unitário (R$)</label>
+        <input type="number" [(ngModel)]="custo.valorUnitario" min="0" step="0.01" />
+      </div>
+
+      <div class="acoes">
+        <button class="btn-salvar" (click)="salvar()">✅ Salvar Custo</button>
+      </div>
+
+      <p class="msg-sucesso" *ngIf="sucesso">Custo salvo com sucesso!</p>
+      <p class="msg-erro" *ngIf="erro">{{ erro }}</p>
+
+    </div>
+
+  </main>
+
+</div>

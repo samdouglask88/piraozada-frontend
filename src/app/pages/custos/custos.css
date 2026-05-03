@@ -1,0 +1,161 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.dashboard {
+  display: flex;
+  min-height: 100vh;
+  background-color: #2C1A0E;
+}
+
+.sidebar {
+  width: 220px;
+  background-color: #1a0f08;
+  display: flex;
+  flex-direction: column;
+  padding: 24px 16px;
+  border-right: 1px solid #3d2410;
+}
+
+.logo {
+  color: #F5A623;
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.subtitulo {
+  color: #888;
+  font-size: 11px;
+  margin-bottom: 32px;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+}
+
+.menu-item {
+  color: #ccc;
+  padding: 10px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  border: none;
+  background: transparent;
+  text-align: left;
+}
+
+.menu-item:hover {
+  background-color: #3d2410;
+  color: #F5A623;
+}
+
+.menu-item.ativo {
+  background-color: #3d2410;
+  color: #F5A623;
+  font-weight: bold;
+}
+
+.btn-logout {
+  margin-top: auto;
+  background-color: transparent;
+  border: 1px solid #F5A623;
+  color: #F5A623;
+  padding: 10px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  text-align: left;
+}
+
+.btn-logout:hover {
+  background-color: #F5A623;
+  color: #2C1A0E;
+}
+
+.conteudo-principal {
+  flex: 1;
+  padding: 32px;
+}
+
+.topo {
+  margin-bottom: 32px;
+}
+
+.topo h2 {
+  color: #F5A623;
+  font-size: 22px;
+}
+
+.topo p {
+  color: #888;
+  font-size: 13px;
+  margin-top: 4px;
+}
+
+.formulario {
+  background-color: #1a0f08;
+  border: 1px solid #3d2410;
+  border-radius: 12px;
+  padding: 32px;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.campo label {
+  color: #888;
+  font-size: 13px;
+}
+
+.campo input {
+  background-color: #2C1A0E;
+  border: 1px solid #3d2410;
+  border-radius: 8px;
+  padding: 10px 14px;
+  color: #fff;
+  font-size: 14px;
+  outline: none;
+}
+
+.campo input:focus {
+  border-color: #F5A623;
+}
+
+.btn-salvar {
+  background-color: #F5A623;
+  color: #2C1A0E;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.btn-salvar:hover {
+  background-color: #e09410;
+}
+
+.msg-sucesso {
+  color: #4caf50;
+  font-size: 14px;
+}
+
+.msg-erro {
+  color: #f44336;
+  font-size: 14px;
+}
